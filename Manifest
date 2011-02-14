@@ -1,0 +1,5 @@
+Rakefile
+lib/options_library.rb
+lib/options_library/option_calculator.rb
+options_library.gemspec
+Manifest
