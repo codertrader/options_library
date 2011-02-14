@@ -1,0 +1,9 @@
+* Add a README with intended uses of the Gem
+* Add a git ignore file
+** Ignore .DS_Store directories
+* line 18 of option_calculator.rb references a call_delta (where is it defined?)
+* delta_call vs. delta_put are these just getter and setters?
+* There are a lot of numbers in options_calculator.rb are they/should they be constants?
+* Are you expecting a particular ruby version? Could you include a .rvmrc?
+* d1 vs. d_one what data do these represent? Could either be named in a more intention revealing way? (see also d2 vs. d_two and most names although I don't understand the domain.
+* Tabs vs. spaces. 2 spaces is my preference.
