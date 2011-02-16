@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = %q{A gem used to calc the price of an option.}
   s.email = %q{jrubyist@gmail.com}
   s.extra_rdoc_files = ["README.md", "lib/options_library.rb", "lib/options_library/option_calculator.rb"]
-  s.files = ["README.md", "Rakefile", "lib/options_library.rb", "lib/options_library/option_calculator.rb", "Manifest", "options_library.gemspec"]
+  s.files = ["Manifest", "README.md", "Rakefile", "lib/options_library.rb", "lib/options_library/option_calculator.rb", "options_library.gemspec"]
   s.homepage = %q{http://github.com/codertrader/options_library}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Options_library", "--main", "README.md"]
   s.require_paths = ["lib"]

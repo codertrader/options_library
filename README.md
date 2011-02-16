@@ -30,7 +30,8 @@ Usage
     require 'rubygems'
     require 'options_library'
 
-    call_price = Option::Calculator.price_call( 94.5, 90.5, 0, 0.015, 0.01, .4875 ) 
+    # Option::Calculator.price_call( underlying, strike, time, interest, sigma, dividend )
+    call_price = Option::Calculator.price_call( 94.5, 90.5, 0.015, 0.01, 0.4875, 0.0 ) 
 
 Testing
 -------
