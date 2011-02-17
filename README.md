@@ -30,6 +30,22 @@ Usage
     require 'rubygems'
     require 'options_library'
 
+    call = Option::Call.new
+    call.underlying = 95.40  # spot price of the underlying
+    call.strike = 90.00  # strike price of option
+    call.time = 0.015 # time in years
+    call.interest = 0.01 # equates to 1% risk free interest
+    call.sigma = 0.4875  # equates to 48.75% volatility
+    call.dividend = 0.0  # no annual dividend yield
+   
+    price = call.calc_price # theoretical value of the option
+    delta = call.calc_delta # option price sensitivity to a change in underlying price
+    gamma = call.calc_gamma # option delta sensitivity to a change in underlying price
+    vega  = call.calc_vega  # option price sensitivity to a change in sigma (volatility)
+    
+    implied_vol = call.calc_implied_vol( 1.80 ) # implied volatility based on the target price 
+
+    # Or go straight at the Calculator methods
     # Option::Calculator.price_call( underlying, strike, time, interest, sigma, dividend )
     call_price = Option::Calculator.price_call( 94.5, 90.5, 0.015, 0.01, 0.4875, 0.0 ) 
 

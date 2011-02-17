@@ -2,15 +2,15 @@
 
 Gem::Specification.new do |s|
   s.name = %q{options_library}
-  s.version = "1.0.2"
+  s.version = "1.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.2") if s.respond_to? :required_rubygems_version=
   s.authors = ["Dan Tylenda-Emmons"]
-  s.date = %q{2011-02-16}
+  s.date = %q{2011-02-17}
   s.description = %q{A gem used to calc the price of an option.}
   s.email = %q{jrubyist@gmail.com}
-  s.extra_rdoc_files = ["README.md", "lib/options_library.rb", "lib/options_library/option_calculator.rb"]
-  s.files = ["Manifest", "README.md", "Rakefile", "lib/options_library.rb", "lib/options_library/option_calculator.rb", "options_library.gemspec"]
+  s.extra_rdoc_files = ["README.md", "lib/options_library.rb", "lib/options_library/option_calculator.rb", "lib/options_library/option_call.rb", "lib/options_library/option_model.rb", "lib/options_library/option_put.rb"]
+  s.files = ["Manifest", "README.md", "Rakefile", "lib/options_library.rb", "lib/options_library/option_calculator.rb", "lib/options_library/option_call.rb", "lib/options_library/option_model.rb", "lib/options_library/option_put.rb", "options_library.gemspec", "options_library/options_library.iml"]
   s.homepage = %q{http://github.com/codertrader/options_library}
   s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "Options_library", "--main", "README.md"]
   s.require_paths = ["lib"]
