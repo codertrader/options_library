@@ -28,6 +28,20 @@ module Option
         phi( d_one( underlying, strike, time, interest, sigma, dividend ) ) / ( underlying * sigma * sqrt(time) )
       end
 	
+      # computes the call price sensitivity to a change in time
+      def theta_call( underlying, strike, time, interest, sigma, dividend )
+        term1 = underlying * phi( d_one( underlying, strike, time, interest, sigma, dividend ) ) * sigma / ( 2 * sqrt(time) )
+        term2 = interest * strike * exp(-1.0 * interest * time) * norm_sdist( d_two( underlying, strike, time, interest, sigma, dividend ) )
+        ( - term1 - term2 ) / 365.0
+      end
+
+      # computes the put price sensitivity to a change in time
+      def theta_put( underlying, strike, time, interest, sigma, dividend )
+        term1 = underlying * phi( d_one( underlying, strike, time, interest, sigma, dividend ) ) * sigma / ( 2 * sqrt(time) )
+        term2 = interest * strike * exp(-1.0 * interest * time) * norm_sdist( - d_two( underlying, strike, time, interest, sigma, dividend ) )
+        ( - term1 + term2 ) / 365.0
+      end
+
       # computes the option price sensitivity to a change in volatility
       def vega( underlying, strike, time, interest, sigma, dividend )
         0.01 * underlying * sqrt(time) * phi(d_one(underlying, strike, time, interest, sigma, dividend))
